@@ -43,7 +43,7 @@ function App() {
           Welcome to my Markdown Previewer !
         </h1>
         <div className="row">
-          <div className="col form-group shadow-textarea">
+          <div className="col-sm-12 col-md-6 form-group shadow-textarea">
             <textarea
               className="form-control z-depth-1 textarea-autosize"
               rows="3"
@@ -54,7 +54,10 @@ function App() {
             />
           </div>
 
-          <div className="col border border-dark p-2" ref={previewRef}>
+          <div
+            className="col-sm-12 col-md-6 border border-dark p-2"
+            ref={previewRef}
+          >
             <div
               id="preview"
               dangerouslySetInnerHTML={{ __html: markdownPreview }}
