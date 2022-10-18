@@ -31,7 +31,9 @@ function App() {
   }, [markdown]);
 
   useEffect(() => {
-    textRef.current.style.height = previewRef.current.scrollHeight + "px";
+    const height = previewRef.current.scrollHeight + "px";
+    textRef.current.style.height = height;
+    textRef.current.style.minHeight = height;
   }, []);
 
   return (
